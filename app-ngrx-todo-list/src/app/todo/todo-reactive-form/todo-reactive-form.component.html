@@ -1,0 +1,20 @@
+<h2>TodoReactiveForm</h2>
+<form [formGroup]="todoForm" (ngSubmit)="save()">
+
+  <mat-form-field>
+    <mat-label>Todo title</mat-label>
+
+    <input matInput name="todoTitle" formControlName="title"/>
+
+  </mat-form-field>
+
+  <br />
+  <mat-checkbox name="todoCompleted" formControlName="completed">Completed ?</mat-checkbox>
+  <br />
+  <button mat-flat-button color="primary" [disabled]="todoForm.invalid">Add</button>
+
+</form>
+
+
+
+

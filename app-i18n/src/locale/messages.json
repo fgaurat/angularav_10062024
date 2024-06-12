@@ -1,0 +1,7 @@
+{
+  "locale": "en-US",
+  "translations": {
+    "5669282625271939591": "Hello {$INTERPOLATION}",
+    "7103789488154491726": "Welcome to this wonderful application."
+  }
+}

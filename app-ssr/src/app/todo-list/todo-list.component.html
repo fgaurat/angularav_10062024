@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>title</th>
+      <th>completed</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(todo of todos$|async;track todo ){
+      <tr>
+        <td>{{todo.id}}</td>
+        <td>{{todo.title}}</td>
+        <td>{{todo.completed}}</td>
+        <td>
+          <button (click)="onDelete(todo)">delete</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

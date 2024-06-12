@@ -1,0 +1,65 @@
+<h1>{{ title }}</h1>
+
+
+<hr>
+<button (click)="toggle()">Show</button>
+<hr>
+@defer(when show()) {
+
+  <app-child-comp></app-child-comp>
+} @placeholder (minimum 500ms) {
+<span>Chargement en cours...</span>
+
+}@loading (after 10ms; minimum 1s) {
+<span>Chargement...</span>
+}@error {
+<span>Erreur lors du chargement</span>
+}
+<br>
+@defer(when show()) {
+
+  <app-child02-comp/>
+} @placeholder (minimum 500ms) {
+<span>Chargement en cours...</span>
+
+}@loading (after 10ms; minimum 1s) {
+<span>Chargement...</span>
+}@error {
+<span>Erreur lors du chargement</span>
+}
+
+
+<br>
+
+
+<h2>on interaction</h2>
+
+@defer(on interaction) {
+
+  <app-child02-comp/>
+} @placeholder (minimum 500ms) {
+<span>Chargement en cours...</span>
+
+}@loading (after 10ms; minimum 1s) {
+<span>Chargement...</span>
+}@error {
+<span>Erreur lors du chargement</span>
+}
+
+<br>
+
+
+<h2>on interaction with button</h2>
+<button #showButton>Show</button>
+<br>
+@defer(on interaction(showButton)) {
+
+  <app-child02-comp/>
+} @placeholder (minimum 500ms) {
+<span>Chargement en cours...</span>
+
+}@loading (after 10ms; minimum 1s) {
+<span>Chargement...</span>
+}@error {
+<span>Erreur lors du chargement</span>
+}

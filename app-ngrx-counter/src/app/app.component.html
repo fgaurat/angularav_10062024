@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+
+
+<button (click)="increment()">Increment</button>
+<button (click)="incrementBy()">IncrementBy2</button>
+
+<div>Current Count: {{ (count$ | async)!.value }}</div>
+
+<button (click)="decrement()">Decrement</button>
+
+<button (click)="reset()">Reset Counter</button>
